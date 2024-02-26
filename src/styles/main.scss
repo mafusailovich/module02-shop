@@ -97,6 +97,8 @@ body {
 }
 
 .main {
+    max-width: 1920px;
+    margin: 0 auto;
     background-image: url('../images/main_bg.png');
     background-size: cover;
     background-position: center;
@@ -141,6 +143,12 @@ body {
         cursor: pointer;
         position: absolute;
         line-height: 2rem;
+        &:hover + .main__btn-cover {
+            border: 1px solid $orange;
+            .main__btn {
+                background-color: $orange;
+            }
+        }
         &--1 {
             top: 48px;
             left:64px;
@@ -168,6 +176,12 @@ body {
         justify-content: center;
         align-items: center;
         cursor: pointer;
+        &:hover {
+            border: 1px solid $orange;
+            .main__btn {
+                background-color: $orange;
+            }
+        }
         &--1 {
             top: 65px;
             left: 144px
