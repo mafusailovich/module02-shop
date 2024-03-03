@@ -1,0 +1,17 @@
+<svg id="Plus" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="62" height="62" viewBox="0 0 31 31">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        opacity: 0.8;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #27300f;
+        stroke-width: 1px;
+      }
+    </style>
+  </defs>
+  <image id="plus-2" data-name="plus" class="cls-1" x="8.5" y="8.5" width="14" height="14" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAABq0lEQVRIiWJUN+BnIBGwMDAwzILqSWNgYPhDtH4GBgYAAAAA//8CaSYViDEwMOhBNYHYz4g2gIGBAQAAAP//YiLDQvIBAwMDAAAA//+ir4UMDAwAAAAA//+ir4UMDAwAAAAA//+ir4UMDAwAAAAA//+ir4UMDAwAAAAA//+ir4UMDAwAAAAA//+ir4UMDAwAAAAA//+ir4UMDAwAAAAA//+ir4UMDAwAAAAA//+ir4UMDAwAAAAA//8CFW0gDCqiiAXIaknRx8DAwPAKAAAA//8CFd7zkMpG2gIGhksAAAAA//+ib5AyMDAAAAAA//8CBSeoiiE1SOdA2SmgYCJaJwPDKwAAAAD//wJZCKrPSKpikA0gSS8DAwMAAAD//6JvkDIwMAAAAAD//6KvhQwMDAAAAAD//6KvhQwMDAAAAAD//6KvhQwMDAAAAAD//6KvhQwMDAAAAAD//6KvhQwMDAAAAAD//6KvhQwMDAAAAAD//6KvhQwMDAAAAAD//6KvhQwMDAAAAAD//6KvhQwMDAAAAAD//yKn5Q0qzi4hsYkHDAwMAAAAAP//AwCDrxDZAJ6BzAAAAABJRU5ErkJggg=="/>
+  <circle id="Эллипс_8" data-name="Эллипс 8" class="cls-2" cx="15.5" cy="15.5" r="15"/>
+</svg>

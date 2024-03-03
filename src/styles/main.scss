@@ -281,6 +281,7 @@ body {
     text-decoration: none;
     border-radius: 3.8rem;
     letter-spacing: 1px;
+    border: none;
 }
 
 .offer {
@@ -289,15 +290,360 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     padding-top: 2rem;
-    padding-bottom: 200px;
+    padding-bottom: 12.8rem;
     &__text {
         margin-top: 6rem;
         max-width: 700px;
     }
 }
 
+.slider {
+    overflow: hidden;
+    padding-top: 100px;
+}
+
 .swiper {
+    overflow: initial;
     &-slide {
-        
+        height: 520px;
+        border: 1px solid rgba($green, 0.4);
+        border-radius: 2rem;
+        padding: 4rem 3.7rem;
+        background-repeat: no-repeat;
+        background-size: cover;
+        justify-content: space-between;
+        position: relative;
+        z-index: 0;
+        &--white {
+            display: flex;
+            justify-content: flex-end;
+            &:hover {
+                .swiper-slide__hover {
+                    height: 233px;
+                    opacity: 1;
+                }
+                &::after {
+                    content: '';
+                    background-color: rgba($wt, 0.55);
+                    width: calc(100% - 4px);
+                    height: calc(100% - 4px);
+                    position: absolute;
+                    z-index: -1;
+                    top: 2px;
+                    left: 2px;
+                    border-radius: 2rem;
+                }
+            }
+        }
+        &:hover {
+            box-shadow: 0 0 0 2px rgba($green, 0.4) inset;
+        }
+        &--milk {
+            background-image: url('../images/milk-bottle.png');
+        }
+        &--pasta {
+            background-image: url('../images/pasta.png');
+        }
+        &--steaks {
+            background-image: url('../images/steaks.png');
+        }
+        &__title {
+            font-family: $font-cormorant;
+            font-size: 3rem;
+            color: $green;
+            margin-bottom: 0;
+        }
+        &__hover {
+            height: 0;
+            opacity: 0;
+        }
+        &__text {
+            color: rgba($green, 0.7);
+            line-height: 1.5;
+            margin-top: 2.5rem;
+            margin-bottom: 3.4rem;
+            min-width: 263px;
+        }
+        &__link {
+            &:hover {
+                opacity: 1;
+            }
+            text-transform: uppercase;
+            font-weight: 500;
+            color: rgba($green, 0.8);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            letter-spacing: 0.1rem;
+            &::before {
+                content: '';
+                display: block;
+                width: 3rem;
+                height: 3rem;
+                background-image: url('../images/plus.svg');
+                background-size: cover;
+                background-repeat: no-repeat;
+                opacity: 0.8;
+            }
+        }
+        &__cover {
+            overflow: hidden;
+            width: 100%;
+            height: 322px;
+            text-align: center;
+        }
+        &__image {
+            height: 100%;
+            width: 100%;
+            max-width: 351px;
+            object-fit: contain;
+        }
+        &__footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+    &-pagination {
+        display: none;
+    }
+    &-button-next,&-button-prev {
+        top: -60px;
+        &:hover {
+            &::after {
+                color: rgba($green, 1);
+            }
+        }
+        &::after {
+            color: rgba($green, .4);
+            font-size: 20px;
+        }
+    }
+    &-button-next {
+        right: -8px;
+    }
+    &-button-prev {
+        left: initial;
+        right: 72px;
+    }
+}
+
+.counter {
+    display: flex;
+    &__btn {
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+        border: 1px solid $green;
+        background-color: transparent;
+        padding: 0;
+    }
+    &__minus {
+        pointer-events: none;
+        border: 1px solid $green;
+        background-image: url('../images/catalog/minus-counter.svg');
+        background-size: 20px 11px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        opacity: 0.4;
+        border-radius: 100%;
+    }
+    &__plus {
+        pointer-events: none;
+        border: 1px solid $green;
+        background-image: url('../images/catalog/plus-counter.svg');
+        background-size: 20px 11px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        border-radius: 100%;
+    }
+    &__input {
+        text-align: center;
+        font-size: 2.4rem;
+        width:46px;
+        border: none;
+        padding: 0;
+    }
+}
+
+.about {
+    padding-bottom: 100px;
+    &__box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 7rem;
+    }
+    &__text {
+        margin-left: 12rem;
+        flex-basis: 620px;
+    }
+    &__list {
+        list-style: none;
+        display: flex;
+        gap:9rem;
+        font-family: $font-cormorant;
+        font-style: italic;
+        font-size: 3rem;
+        margin: 0;
+        padding-left: 0;
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        &::before {
+            content: '';
+            width: 84px;
+            height: 84px;
+            background-position: center center;
+            background-repeat: no-repeat;
+            border: 1px solid rgba($green, 0.4);
+            border-radius:100%;
+            margin-bottom: 1.5rem;
+        }
+        &:nth-child(1) {
+            &::before {
+                background-image: url('../images/health.svg');
+                background-size: 44px 41px;
+            }
+        }
+        &:nth-child(2) {
+            &::before {
+                background-image: url('../images/traditions.svg');
+                background-size: 40px 40px;
+            }
+        }
+        &:nth-child(3) {
+            &::before {
+                background-image: url('../images/taste.svg');
+                background-size: 45px 39px;
+            }
+        }
+    }
+}
+
+.catalog {
+    &__menu {
+        list-style: none;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 0;
+        gap:2rem;
+    }
+    &__menu-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 230px;
+        height: 70px;
+        font-size: 1.8rem;
+        color: rgba($green, 0.5);
+        border: 1px solid rgba($green, 0.5);
+        border-radius: 3.5rem;
+        text-align: center;
+        text-decoration: none;
+        &:hover {
+            color: $orange;
+            border: 1px solid $orange;
+        }
+    }
+    &__goods {
+        display: grid;
+        grid-template-columns: repeat(4, 345px);
+        justify-content: space-between;
+        gap:2rem;
+        margin-bottom: 100px;
+    }
+    &__card {
+        border: 1px solid rgba(#27300f, 0.4);
+        border-radius: 20px;
+        padding: 39px 20px 39px 30px;
+    }
+    &--link {
+        font-size: 1.4rem;
+        letter-spacing: 0.1rem;
+        padding: 22px 33px;
+    }
+    &--minus, &--plus {
+        width: 40px;
+        height: 40px;
+    }
+    &--input {
+        width: 33px;
+    }
+    &--cover {
+        height: 204px;
+    }
+    &__btn {
+
+    }
+}
+
+.contact {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    &-box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &__text {
+            max-width: 400px;
+            flex-grow: 1;
+        }
+    }
+    &__form {
+        flex-basis: 589px;
+    }
+}
+
+.card {
+    border: 2px solid rgba($green, 0.4);
+    padding: 3.2rem 5.9rem 4rem;
+    border-radius: 20px;
+    &__title {
+        font-size: 30px;
+        font-family: $font-cormorant;
+        margin-top: 0;
+    }
+    &__label {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        display: block;
+        margin-left: 0.6rem;
+    }
+    &__input {
+        border: 1px solid rgba($green, 0.4);
+        margin-bottom: 2.8rem;
+        display: block;
+        padding: 2.2rem 3rem;
+        margin-bottom: 2rem;
+        width: 100%;
+        &:focus {
+            border: 1px solid rgba($green, 1);
+            outline: none;
+        }
+        &:invalid {
+            border: red;
+        }
+    }
+    &__check {
+        font-size: 1.2rem;
+        color: rgba($green, .6);
+        line-height: 1.5;
+        max-width: 360px;
+        margin-top: 1.6rem;
+        margin-bottom: 0;
+    }
+    &__link {
+        margin-top: 1.2rem;
+    }
+    &__docs {
+        color: rgba($green, 0.6);
+        text-decoration: none;
+        border-bottom: 1px solid #ecedec;
     }
 }
