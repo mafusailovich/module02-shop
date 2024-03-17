@@ -11,6 +11,17 @@ $font-cormorant: "Cormorant", serif;
 
 $circle-btn: false;
 
+$r_minmob: 320px;
+$r_mob_360: 360px;
+$r_mob_400: 400px;
+$r_mob_500: 500px;
+$r_mob_600: 600px;
+$r_tab: 768px;
+$r_desk: 1000px;
+$r_desk_hd: 1200px;
+$r_desk_1280: 1280px;
+$r_desk_1600: 1600px;
+
 * {
     box-sizing: border-box;
 }
@@ -34,6 +45,10 @@ body {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    @media (max-width: $r_desk_1600) {
+        justify-content: space-between;
+        padding-left: 10px;
+    }
     &__nav {
         display: flex;
         list-style-type: none;
@@ -41,6 +56,11 @@ body {
         padding-left: 0;
         gap: 4.8rem;
         margin-right: 246px;
+        @media (max-width: $r_desk_1600) {
+            margin-right: 0;
+            gap: none;
+            justify-content: space-between;
+        }
     }
     &__link {
         font-size: 1.6rem;
@@ -59,6 +79,9 @@ body {
         margin-right: 82px;
         &:hover {
             color: $orange;
+        }
+        @media (max-width: $r_desk_hd) {
+            display: none;
         }
     }
     &__cart {
@@ -85,6 +108,32 @@ body {
         right: 0.8rem;
         top: 0.6rem;
     }
+    &__phone,
+    &__menu {
+        display: none;
+    }
+    &__phone {
+        @media (max-width: $r_desk_hd) {
+            display: block;
+            position: relative;
+            background-color: $wt;
+            background-image: url("../images/cart.svg");
+            background-position: center center;
+            background-repeat: no-repeat;
+            border-radius: 50%;
+            background-size: 1.7rem 1.5rem;
+            border: 1px solid $orange;
+            width: 3.8rem;
+            height: 3.8rem;
+        }
+    }
+    &__buttons {
+        @media (max-width: $r_desk_hd) {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+    }
 }
 
 .logo {
@@ -93,6 +142,9 @@ body {
     width: 120px;
     height: 32px;
     margin-right: 120px;
+    @media (max-width: 1600px) {
+        margin-right: 0;
+    }
 }
 
 .container {
@@ -206,30 +258,35 @@ body {
     }
     &__tomato {
         position: absolute;
+        z-index: -1;
         top: 840px;
         right: 116px;
         width: 11rem;
     }
     &__avocado {
         position: absolute;
+        z-index: -1;
         top: 48px;
         right: -3px;
         width: 17.4rem;
     }
     &__cucumber {
         position: absolute;
+        z-index: -1;
         top: 0px;
         left: 686px;
         width: 85px;
     }
     &__pepper {
         position: absolute;
+        z-index: -1;
         top: 397px;
         left: 32px;
         width: 9rem;
     }
     &__beans {
         position: absolute;
+        z-index: -1;
         top: 800px;
         left: -4px;
         width: 11rem;
@@ -252,7 +309,8 @@ body {
             display: block;
         }
     }
-    &--trends, &--catalog {
+    &--trends,
+    &--catalog {
         margin-bottom: 45px;
     }
     &--main {
@@ -307,7 +365,7 @@ body {
     overflow: hidden;
     padding-top: 100px;
     &__trends {
-        padding-top:84px;
+        padding-top: 84px;
     }
 }
 
@@ -639,13 +697,13 @@ body {
         padding-left: 40px;
         &::before {
             position: absolute;
-            left:0;
-            top:0;
+            left: 0;
+            top: 0;
             opacity: 0.8;
-            content: '';
+            content: "";
             width: 25px;
             height: 25px;
-            background-image: url('../images/catalog/refresh-svg.svg');
+            background-image: url("../images/catalog/refresh-svg.svg");
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
